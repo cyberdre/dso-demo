@@ -38,8 +38,6 @@ pipeline {
             }
           }
         }
-      }
-    }   
     stage('Docker BnP') {
       steps {
 	container('kaniko') {
@@ -48,6 +46,7 @@ pipeline {
          }
        }
      }
+   } 
     stage('Deploy to Dev') {
       steps {
         // TODO
